@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/welcome"
+        android:text="Welcome To Countdown Timer application"
+        android:layout_margin="10dp"
+        android:textSize="17dp"
+        android:textColor="#536DFE"
+        android:textStyle="bold"
+        android:shadowColor="@color/colorAccent"
+        />
+
+    <EditText
+        android:layout_below="@id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/entermins"
+        android:drawableStart="@drawable/ic_baseline_timer_24"
+        android:hint="Enter the time you need in second"
+        android:layout_margin="20dp"
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="00:00:00"
+        android:textSize="24pt"
+
+        android:layout_below="@id/entermins"
+
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:layout_gravity="center"
+        android:id="@+id/txtTimer"
+
+        android:layout_margin="10dp"/>
+    <Button
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/btnStart"
+        android:onClick="onClickStart"
+        android:layout_below="@id/txtTimer"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/btnStop"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnStart"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="onClickStop"
+        android:text="Stop" />
+
+    <Button
+        android:layout_centerInParent="true"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:layout_gravity="center"
+        android:onClick="onClickReset"
+        android:id="@+id/btnReset"
+        android:layout_below="@id/btnStop"
+        android:layout_margin="10dp"/>
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/timer"
+        android:layout_below="@+id/btnReset"
+        android:layout_margin="10dp"/>
+
+
+</RelativeLayout>
